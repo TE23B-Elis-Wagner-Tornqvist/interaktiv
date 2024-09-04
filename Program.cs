@@ -1,27 +1,27 @@
 ﻿using System.Runtime.InteropServices;
 
-while (true)
+while (true)  //loopar om koden så att det externa fönstret inte stängs av sig själv
 { 
 
     //string jobb = Console.ReadLine() ?? string.Empty;
 
     Console.WriteLine("du ser ett brinnande hus och det stpr folk runt omkring som säger att folk är kvar och fast. Väljer du att gå in i huset för att rädda folken eller fortsätter du på din väg hem? (svara huset eller hem)");
-    string vart = Console.ReadLine() ?? string.Empty;
+    string vart = Console.ReadLine() ?? string.Empty;      //gör en string för vart så att användaren kan skriva in sitt svar
  
     
-    if (vart.ToLower() == "huset")
+    if (vart.ToLower() == "huset")   //om användaren skriver huset så kommer det att hända det som står i if satsen
     {
         Console.Clear();
         Console.WriteLine("Du väljer att gå in i huset för att rädda de som är kvar. När du kommer in i huset ser du en liten flicka som är fast i en garderob. Men du märker att det är väldigt farligt att gå in och rädda henne då huset håller på att falla samman. Väljer du att rädda henne eller går du ut ur huset? svara(flicka eller ut)");
 
-        string räddaFlicka = Console.ReadLine() ?? string.Empty;
+        string räddaFlicka = Console.ReadLine() ?? string.Empty;   // en till string för ett till val användaren kan göra
 
-        if (räddaFlicka.ToLower() == "flicka")
+        if (räddaFlicka.ToLower() == "flicka") //om de väljer flickan händer det som är inut i if satsen
         {
             Console.Clear();
             Console.WriteLine("Du väljer att rädda flickan och hinner precis ta henne i din famn och springa ut ur den brinnande byggnaden. Du lämnar tillbaka flickan till sina föräldrar. Du är en hjälte!");
 
-         } else if (räddaFlicka.ToLower() == "ut") {
+         } else if (räddaFlicka.ToLower() == "ut") {   //annars om de väljer att gå ut händer det som är i else if satsen
 
             Console.Clear();
             Console.WriteLine("Du väljer att inte gå in i huset och rädda de som är kvar. Du går vidare på din väg hem och tänker på de stackars människorna som är kvar i huset. Du vill på något sätt ta bort dem jobbiga tankarna. Ska du gå till en fest eller gå hem och sova? (svara fest eller sova)");
@@ -64,7 +64,7 @@ Console.Clear();
 
             }
 
-   else if (vart.ToLower() == "hem") {  
+   else if (vart.ToLower() == "hem") {  //det som händer om de väljer att gå hem och inte in i det brinnande huset
         
         Console.Clear();
 
@@ -72,19 +72,19 @@ Console.Clear();
 
                 
             
-            string snacks = Console.ReadLine() ?? string.Empty;
+            string snacks = Console.ReadLine() ?? string.Empty; // en string för vilka snacks de väljer att köpa
 
-            if(snacks.ToLower() == "lösgodis") {
+            if(snacks.ToLower() == "lösgodis") { // ifall de väljer lös godis
                 Console.Clear();   
                 
                 Console.WriteLine("Du köper ditt lösgodis och sätter dig för att lira lite CS2, du hoppar in i ett call med boisen, snackar lite skit och har riktigt roligt. Men när du sätter dig för att äta ditt godis inser du att du hade köpt en godis som hade jordnötter i sig och du är dödligt allergisk till jordnötter. Du får en allergisk reaktion och dör");
                 
-                 } else if(snacks.ToLower() == "chips") {
+                 } else if(snacks.ToLower() == "chips") {  //ifall de väljer chips
                      Console.Clear();
                      
                      Console.WriteLine("Du köper chips och sätter dig för att lira lite CS2, du hoppar in i ett call med boisen, snackar lite skit och har riktigt roligt. Men du moffar i dig lite för mycket chips medans to lirar och du sätter en sjuk mängd av chips i halsen och dör av kvävning");
 
-                 } else if(snacks.ToLower() == "glass") {
+                 } else if(snacks.ToLower() == "glass") {  //ifall de väljer glass
                      Console.Clear();
                      
                      Console.WriteLine("Du köper glass och sätter dig för att lira lite CS2, du hoppar in i ett call med boisen, ni sitter uppe nästan hela natten och spelar alla olika slags roliga spel. Du har en undebar kväll och inser att du gjorde rätt val. Du överlevde");
@@ -94,12 +94,12 @@ Console.Clear();
 
     Console.WriteLine("Vill du spela igen? (svara ja eller nej)");
 
-    string spelaIgen = Console.ReadLine() ?? string.Empty;
-
-    if(spelaIgen.ToLower() == "nej") {
+    string spelaIgen = Console.ReadLine() ?? string.Empty;   //en string för om de vill spela igen eller inte
+ 
+    if(spelaIgen.ToLower() == "nej") {  // om de väljer nej så stängs det externa terminalfönstret ned
         break;
     }
-    else if(spelaIgen.ToLower() == "ja") {
+    else if(spelaIgen.ToLower() == "ja") { // om de väljer ja så fortsätter koden
         Console.Clear();
     }
 
